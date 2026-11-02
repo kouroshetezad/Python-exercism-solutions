@@ -47,6 +47,7 @@ plus the original Exercism test file.
 | Anagram | `anagram/anagram.py` |
 | Armstrong Numbers | `armstrong-numbers/armstrong_numbers.py` |
 | Binary Search | `binary-search/binary_search.py` |
+| Bob | `bob/bob.py` |
 | Collatz Conjecture | `collatz-conjecture/collatz_conjecture.py` |
 | Darts | `darts/darts.py` |
 | Difference of Squares | `difference-of-squares/difference_of_squares.py` |
