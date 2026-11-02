@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/isogram/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from isogram import (
     is_isogram,
 )
-
 
 class IsogramTest(unittest.TestCase):
     def test_empty_string(self):

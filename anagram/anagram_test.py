@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/anagram/canonical-data.json
-# File last updated on 2024-02-28
-
 import unittest
 
 from anagram import (
     find_anagrams,
 )
-
 
 class AnagramTest(unittest.TestCase):
     def test_no_matches(self):

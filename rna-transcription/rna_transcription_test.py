@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/rna-transcription/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from rna_transcription import (
     to_rna,
 )
-
 
 class RnaTranscriptionTest(unittest.TestCase):
     def test_empty_rna_sequence(self):

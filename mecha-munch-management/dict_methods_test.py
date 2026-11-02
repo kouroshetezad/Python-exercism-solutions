@@ -63,9 +63,6 @@ class MechaMunchManagementTest(unittest.TestCase):
                              f'The function returned {actual_result}, but the tests '
                              f'expected: {expected} for the sorted entries.')
 
-                # Because we are asserting equal, we need to convert to an OrderedDict.
-                # Regular dictionaries will compare equal even when they are ordered
-                # differently from one another. See https://stackoverflow.com/a/58961124
                 self.assertEqual(OrderedDict(actual_result), OrderedDict(expected), msg=error_msg)
 
     @pytest.mark.task(taskno=5)
@@ -77,9 +74,6 @@ class MechaMunchManagementTest(unittest.TestCase):
                              f'The function returned {actual_result}, but the tests '
                              f'expected: {expected} as the fulfillment cart.')
 
-                # Because we are asserting equal, we need to convert to an OrderedDict.
-                # Regular dictionaries will compare equal even when they are ordered
-                # differently from one another. See https://stackoverflow.com/a/58961124
                 self.assertEqual(OrderedDict(actual_result), OrderedDict(expected), msg=error_msg)
 
     @pytest.mark.task(taskno=6)

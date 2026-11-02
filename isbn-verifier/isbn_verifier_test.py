@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/isbn-verifier/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from isbn_verifier import (
     is_valid,
 )
-
 
 class IsbnVerifierTest(unittest.TestCase):
     def test_valid_isbn(self):

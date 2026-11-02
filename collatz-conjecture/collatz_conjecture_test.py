@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/collatz-conjecture/canonical-data.json
-# File last updated on 2023-07-20
-
 import unittest
 
 from collatz_conjecture import (
     steps,
 )
-
 
 class CollatzConjectureTest(unittest.TestCase):
     def test_zero_steps_for_one(self):

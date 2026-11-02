@@ -1,7 +1,3 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/list-ops/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from list_ops import (
@@ -14,7 +10,6 @@ from list_ops import (
     filter as list_ops_filter,
     map as list_ops_map,
 )
-
 
 class ListOpsTest(unittest.TestCase):
     def test_append_empty_lists(self):
@@ -87,8 +82,6 @@ class ListOpsTest(unittest.TestCase):
         self.assertEqual(
             reverse([[1, 2], [3], [], [4, 5, 6]]), [[4, 5, 6], [], [3], [1, 2]]
         )
-
-    # Additional tests for this track
 
     def test_foldr_foldr_add_string(self):
         self.assertEqual(

@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/darts/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from darts import (
     score,
 )
-
 
 class DartsTest(unittest.TestCase):
     def test_missed_target(self):

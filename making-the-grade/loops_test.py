@@ -9,15 +9,11 @@ from loops import (
     student_ranking,
     perfect_score)
 
-
 class MakingTheGradeTest(unittest.TestCase):
 
     @pytest.mark.task(taskno=1)
     def test_round_scores(self):
 
-        # Because we the input list can be mutated, the test data has been created
-        # as tuples, which we then convert to a list when the test runs.
-        # this makes accurate error messages easier to create.
         test_data = [tuple(),
                      (.5,),
                      (1.5,),
@@ -32,14 +28,12 @@ class MakingTheGradeTest(unittest.TestCase):
         for variant, (student_scores, expected) in enumerate(zip(test_data, result_data), start=1):
             with self.subTest(f'variation #{variant}', student_scores=student_scores, expected=expected):
 
-                # Because the test_input is a tuple, it has to be converted to a list for the function call.
                 actual_result = round_scores(list(student_scores))
                 error_message = (f'Called round_scores({list(student_scores)}). '
                                  f'The function returned {sorted(actual_result)} after sorting, but '
                                  f'the tests expected {sorted(expected)} after sorting. '
                                  f'One or more scores were rounded incorrectly.')
 
-                # everything is sorted for easier comparison.
                 self.assertEqual(sorted(actual_result), sorted(expected), msg=error_message)
 
     @pytest.mark.task(taskno=2)
@@ -139,7 +133,6 @@ class MakingTheGradeTest(unittest.TestCase):
                      [['Yoshi', 52], ['Jan', 86], ['Raiana', 100], ['Betty', 60],
                       ['Joci', 100], ['Kora', 81], ['Bern', 41], ['Rose', 94]]
                      ]
-
 
         result_data = [['Joci', 100],[], [], [], ['Raiana', 100]]
 

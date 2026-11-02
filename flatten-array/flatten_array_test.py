@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/flatten-array/canonical-data.json
-# File last updated on 2025-03-22
-
 import unittest
 
 from flatten_array import (
     flatten,
 )
-
 
 class FlattenArrayTest(unittest.TestCase):
     def test_empty(self):

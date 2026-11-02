@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/resistor-color-trio/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from resistor_color_trio import (
     label,
 )
-
 
 class ResistorColorTrioTest(unittest.TestCase):
     def test_orange_and_orange_and_black(self):

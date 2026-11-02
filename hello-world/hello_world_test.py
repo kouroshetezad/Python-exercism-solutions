@@ -1,7 +1,3 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/hello-world/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 try:
@@ -15,14 +11,12 @@ except ImportError as import_fail:
 
     item_name = item_name[:-1] + "()'"
 
-    # pylint: disable=raise-missing-from
     raise ImportError(
         "\n\nMISSING FUNCTION --> In your 'hello_world.py' file, we can not find or import the"
         f" function named {item_name}. \nThe tests for this first exercise expect a function that"
         f' returns the string "Hello, World!"'
         f'\n\nDid you use print("Hello, World!") instead?'
     ) from None
-
 
 class HelloWorldTest(unittest.TestCase):
     def test_say_hi(self):

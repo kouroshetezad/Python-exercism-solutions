@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/bob/canonical-data.json
-# File last updated on 2026-06-27
-
 import unittest
 
 from bob import (
     response,
 )
-
 
 class BobTest(unittest.TestCase):
 

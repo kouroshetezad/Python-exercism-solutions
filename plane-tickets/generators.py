@@ -33,21 +33,21 @@ def generate_seats(number):
     Example: 3C, 3D, 4A, 4B
 
     """
-    
+
     letters = ['A', 'B', 'C', 'D']
     row = 1
     count = 0
-    
+
     while count < number:
         if row == 13:
-            row += 1  # Skip row 13
+            row += 1
         for letter in letters:
             if count >= number:
                 break
             yield f"{row}{letter}"
             count += 1
         row += 1
-        
+
 def assign_seats(passengers):
     """Assign seats to passengers.
 
@@ -59,16 +59,16 @@ def assign_seats(passengers):
     """
 
     seat_assignment = {}
-    seat_letters = ["A", "B", "C", "D"] 
+    seat_letters = ["A", "B", "C", "D"]
     seat_row = 1
-    
+
     seat_letter_index = 0
 
     for passenger in passengers:
         seat_number = str(seat_row) + seat_letters[seat_letter_index]
-     
+
         seat_assignment[passenger] = seat_number
-        
+
         seat_letter_index += 1
         if seat_letter_index >= len(seat_letters):
             seat_letter_index = 0
@@ -83,21 +83,18 @@ def generate_codes(seat_numbers, flight_id):
     :param flight_id: str - string containing the flight identifier (e.g., 'LH778').
     :return: generator - generator that yields 12-character long ticket codes.
     """
-    
-    
+
     for seat in seat_numbers:
-        
+
         base_code = seat + flight_id
-        
-    
+
         current_length = len(base_code)
-        
-    
+
         padding_needed = 12 - current_length
         if padding_needed > 0:
             zero_padding = "0" * padding_needed
         else:
-            
+
             zero_padding = ""
         ticket_code = base_code + zero_padding
         final_ticket_code = ticket_code[:12]

@@ -1,4 +1,3 @@
-##add_item test cases##
 add_item_inputs = [
     ({"Apple": 1, "Banana": 4}, ("Apple", "Banana", "Orange")),
     (
@@ -19,8 +18,6 @@ add_item_outputs = [
 
 add_item_data = zip(add_item_inputs, add_item_outputs)
 
-
-##read_notes test cases##
 read_notes_inputs = [
     ("Apple", "Banana"),
     ("Orange", "Raspberry", "Blueberries"),
@@ -35,8 +32,6 @@ read_notes_outputs = [
 
 read_notes_data = zip(read_notes_inputs, read_notes_outputs)
 
-
-##update_recipes test cases##
 update_recipes_inputs = [
     (
         {
@@ -196,8 +191,6 @@ update_recipes_outputs = [
 
 update_recipes_data = zip(update_recipes_inputs, update_recipes_outputs)
 
-
-##sort_entries test cases##
 sort_entries_inputs = [
     {"Banana": 4, "Apple": 2, "Orange": 1, "Pear": 12},
     {"Apple": 3, "Orange": 5, "Banana": 1, "Avocado": 2},
@@ -226,11 +219,8 @@ sort_entries_outputs = [
     },
 ]
 
-
 sort_entries_data = zip(sort_entries_inputs, sort_entries_outputs)
 
-
-##send_to_store test cases##
 send_to_store_inputs = [
     (
         {"Banana": 3, "Apple": 2, "Orange": 1, "Milk": 2},
@@ -319,8 +309,6 @@ send_to_store_outputs = [
 
 send_to_store_data = zip(send_to_store_inputs, send_to_store_outputs)
 
-
-##update_store_inventory test cases##
 update_store_inventory_inputs = [
     (
         {

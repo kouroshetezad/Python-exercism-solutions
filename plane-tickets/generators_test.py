@@ -117,7 +117,6 @@ class PlaneTicketsTest(unittest.TestCase):
 
         self.assertTrue(inspect.isgenerator(generate_codes(seat_numbers, flight_id)), msg=error_message)
 
-
     @pytest.mark.task(taskno=4)
     def test_generate_codes(self):
         test_data = [(["12A", "38B", "69C", "102B"],"KL1022"),
@@ -134,7 +133,4 @@ class PlaneTicketsTest(unittest.TestCase):
                                  f'The function returned {actual_result}, but the tests '
                                  f'expected {expected} when generating ticket numbers.')
 
-                # Note: DO NOT call the function here again, in case the student is using list.pop()
-                # to process the input.  If another call is done with that condition,
-                # the test will fail with a terrible error message.
                 self.assertEqual(actual_result, expected, msg=error_message)

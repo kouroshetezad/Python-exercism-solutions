@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/raindrops/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from raindrops import (
     convert,
 )
-
 
 class RaindropsTest(unittest.TestCase):
     def test_the_sound_for_1_is_1(self):

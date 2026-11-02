@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/hamming/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from hamming import (
     distance,
 )
-
 
 class HammingTest(unittest.TestCase):
     def test_empty_strands(self):

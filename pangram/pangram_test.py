@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/pangram/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from pangram import (
     is_pangram,
 )
-
 
 class PangramTest(unittest.TestCase):
     def test_empty_sentence(self):
@@ -44,8 +39,6 @@ class PangramTest(unittest.TestCase):
 
     def test_a_m_and_a_m_are_26_different_characters_but_not_a_pangram(self):
         self.assertIs(is_pangram("abcdefghijklm ABCDEFGHIJKLM"), False)
-
-    # Additional tests for this track
 
     def test_sentence_without_lower_bound(self):
         self.assertIs(is_pangram("bcdefghijklmnopqrstuvwxyz"), False)

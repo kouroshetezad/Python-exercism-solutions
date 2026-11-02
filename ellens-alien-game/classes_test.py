@@ -1,11 +1,9 @@
 import unittest
 import pytest
 
-
 try:
     from classes import Alien
 except ImportError as import_fail:
-    # pylint: disable=raise-missing-from
     raise ImportError("\n\nMISSING CLASS --> We tried to import the 'Alien' class from "
                       'your classes.py file, but could not find it. '
                       'Did you misname or forget to create it?') from None
@@ -17,7 +15,6 @@ except ImportError as err:
                       'new_aliens_collection() function '
                       'from your classes.py file, but could not find it. '
                       'Did you misname or forget to create it?') from None
-
 
 class ClassesTest(unittest.TestCase):
 
@@ -64,7 +61,6 @@ class ClassesTest(unittest.TestCase):
         self.assertFalse(alien_one.x_coordinate == alien_two.x_coordinate, msg=coord_x_error)
         self.assertFalse(alien_one.y_coordinate == alien_two.y_coordinate, msg=coord_y_error)
 
-
     @pytest.mark.task(taskno=2)
     def test_alien_hit_method(self):
         """Test class methods work as specified.
@@ -94,7 +90,6 @@ class ClassesTest(unittest.TestCase):
                                  f'point {iterations} time(s).')
 
                 self.assertIn(alien.health, expected, msg=error_message)
-
 
     @pytest.mark.task(taskno=3)
     def test_alien_is_alive_method(self):
@@ -140,7 +135,6 @@ class ClassesTest(unittest.TestCase):
 
         self.assertIsNone(alien.collision_detection(Alien(7, 2)), msg=error_message)
 
-
     @pytest.mark.task(taskno=6)
     def test_alien_class_variable(self):
         """Test class attribute/variables are identical across instances."""
@@ -169,9 +163,6 @@ class ClassesTest(unittest.TestCase):
                          'but the tests expect them to have different health as '
                          'only one was hit. Are you using a class variable for the health?')
 
-        # This checks that a class attribute, Alien.health, is not being used.
-        # If a class attribute is being used, hit() would update the health across
-        # all instances of the class.
         self.assertNotEqual(alien_two.health,
                             alien_one.health,
                             msg=error_message)

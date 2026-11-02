@@ -1,7 +1,6 @@
 import unittest
 import pytest
 
-# pylint: disable=deprecated-module
 from sets import (clean_ingredients,
                   check_drinks,
                   categorize_dish,
@@ -9,7 +8,6 @@ from sets import (clean_ingredients,
                   compile_ingredients,
                   separate_appetizers,
                   singleton_ingredients)
-
 
 from sets_categories_data import (VEGAN,
                                   VEGETARIAN,
@@ -36,7 +34,6 @@ from sets_test_data import (recipes_with_duplicates,
                             dishes_cleaned,
                             dishes_and_overlap,
                             singletons)
-
 
 class SetsTest(unittest.TestCase):
 

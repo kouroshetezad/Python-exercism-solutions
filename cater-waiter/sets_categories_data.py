@@ -1,5 +1,3 @@
-# pylint: disable-all
-# flake8: noqa,
 VEGAN = {
          'chives', 'nutritional yeast', 'tomato', 'orange zest', 'pareve puff pastry', 'cashews', 'tofu',
          'rice vinegar', 'black pepper', 'cardamom powder', 'mustard seeds', 'parev shortcrust pastry',
@@ -25,7 +23,6 @@ VEGAN = {
          'ginger', 'dried cherries', 'red onion', 'rosemary', 'chopped parsley', 'corn', 'cumin powder', 'pecans',
          'silken tofu', 'pomegranate molasses', 'carrot', 'corn flour', 'mashed potatoes'
         }
-
 
 VEGETARIAN = {
               'almonds', 'chives', 'limes', 'puff pastry', 'onion', 'cashews', 'red cabbage', 'red wine vinegar',
@@ -140,7 +137,6 @@ ALCOHOLS = {"whiskey", "whisky", "white rum", "dark rum", "bourbon", "rye", "sco
             "triple sec", "coffee liqueur", "almond liqueur", "champagne", "orange curacao", "rum"
             }
 
-
 VEGAN_INTERSECTIONS = {'brown sugar', 'carrot', 'sugar', 'vegetable stock', 'fresh ginger', 'nutritional yeast',
                       'cayenne pepper', 'olive oil', 'lemon', 'ginger', 'red onion', 'pomegranate molasses',
                       'onion', 'water', 'chickpea flour', 'orange zest', 'coconut oil', 'smoked paprika',
@@ -175,7 +171,6 @@ OMNIVORE_INTERSECTIONS = {'mint', 'carrot', 'fresh mint', 'olive oil', 'lemon', 
                          'kosher salt', 'white onion', 'turmeric', 'rosemary', 'vinegar', 'tomatoes',
                          'sea salt', 'soy sauce', 'lemon juice', 'onions', 'thyme', 'garlic', 'avocado',
                           'fresh corn tortillas', 'tomato paste'}
-
 
 EXAMPLE_INTERSECTION = {'fresh red chili', 'sugar', 'nutritional yeast', 'fresh ginger', 'red chili powder', 'garlic',
                         'olive oil', 'mashed potatoes', 'garam masala', 'clove powder', 'cumin powder', 'onion',

@@ -1,15 +1,8 @@
-# pylint: disable-all
-# flake8: noqa,
 from sets_categories_data import (VEGAN_INTERSECTIONS,
                                   VEGETARIAN_INTERSECTIONS,
                                   PALEO_INTERSECTIONS,
                                   KETO_INTERSECTIONS,
                                   OMNIVORE_INTERSECTIONS)
-
-
-###################################
-# Data for test_clean_ingredients #
-###################################
 
 recipes_with_duplicates  =  [('Kisir with Warm Pita', ['bulgur', 'pomegranate molasses', 'chopped parsley', 'lemon juice', 'tomato', 'persian cucumber', 'tomato paste', 'spring onion', 'water', 'olive oil', 'bulgur', 'bulgur', 'pomegranate molasses', 'pomegranate molasses', 'pomegranate molasses', 'chopped parsley', 'lemon juice', 'tomato', 'tomato', 'persian cucumber', 'tomato paste', 'tomato paste', 'tomato paste']),
                              ('Shakshuka', ['vegan unsweetened yoghurt', 'yellow onion', 'firm tofu', 'smoked paprika', 'tomatoes', 'tomato paste', 'sugar', 'cloves', 'cumin', "za'atar", 'olive oil', 'harissa', 'red bell pepper']),
@@ -145,11 +138,6 @@ recipes_without_duplicates  =  [('kisir_with_warm_pita', 'Kisir with Warm Pita',
                                 ('lamb_over_marinated_summer_squash_with_hazelnuts_and_ricotta', 'Lamb over Marinated Summer Squash with Hazelnuts and Ricotta', {'red pepper flakes', 'hazelnuts', 'zucchini', 'bay leaves', 'carrot', 'garlic', 'white wine vinegar', 'toasted bread', 'lemon', 'onions', 'rosemary', 'leg of lamb', 'summer squash', 'sea salt', 'anchovy fillets', 'vinegar', 'olive oil', 'black pepper', 'fresh mint', 'celery', 'kosher salt', 'fresh ricotta', 'sugar'})
                                 ]
 
-##############################
-# Data for test_check_drinks #
-##############################
-
-
 all_drinks  =  [('Amaretto Sour', ['almond liqueur', 'bourbon', 'cherries', 'egg white', 'lemon juice', 'lemon twist', 'simple syrup']),
                 ('Aperol Spritz', ['aperol', 'prosecco', 'soda water']),
                 ('Bannana Punch', ['banana', 'ginger ale', 'lemonade', 'orange juice', 'pineapple juice', 'sugar', 'water']),
@@ -203,11 +191,6 @@ drink_names = ['Amaretto Sour Cocktail','Aperol Spritz Cocktail','Bannana Punch 
                'Salted Watermelon Juice Mocktail','Shirley Tonic Mocktail','Shirley ginger Mocktail',
                'Spiced Hibiscus Tea Mocktail','Turmeric Tonic Mocktail','Virgin Cucumber Gimlet Mocktail',
                'Whiskey Sour Cocktail']
-
-
-#################################
-# Data for test_categorize_dish #
-#################################
 
 all_dishes = recipes_without_duplicates
 
@@ -273,12 +256,6 @@ dishes_categorized  =  ['Zucchini Fritters with Lemon-Thyme Coconut Yogurt: PALE
                         'Avocado Deviled Eggs: PALEO',
                         'Asparagus Puffs: VEGETARIAN']
 
-
-#########################################
-# Data for test_tag_special_ingredients #
-#########################################
-
-
 dupes =  ['Baked Kelewele', 'Barley Risotto', 'Burmese Tofu with Garlic, Ginger and Chili Sauce',
           'Cambodian-Style Vegetable Spring Rolls', 'Fried Zucchini with Balsamic and Chili Dressing',
           'Kisir with Warm Pita', 'Shakshuka', 'Summer Minestrone Cups', 'Vegetarian Khoresh Bademjan']
@@ -311,12 +288,6 @@ dishes_labeled =  [('Baked Kelewele', {'red onion'}),
                    ('Shrimp, Bacon and Crispy Chickpea Tacos with Salsa de Guacamole', {'shrimp', 'garlic', 'butter', 'slivered almonds', 'bacon'}),
                    ('Summer Minestrone Cups', {'garlic', 'tomatoes', 'parmesan cheese'}),
                    ('Vegetarian Khoresh Bademjan', {'slivered almonds', 'tomato paste'})]
-
-
-#####################################
-# Data for test_compile_ingredients #
-#####################################
-
 
 ingredients_only = [[{'bulgur', 'pomegranate molasses', 'chopped parsley', 'lemon juice', 'tomato', 'persian cucumber', 'tomato paste', 'spring onion', 'water', 'olive oil'},
                      {'vegan unsweetened yoghurt', 'yellow onion', 'firm tofu', 'smoked paprika', 'tomatoes', 'tomato paste', 'sugar', 'cloves', 'cumin', "za'atar", 'olive oil', 'harissa', 'red bell pepper'},
@@ -389,41 +360,30 @@ ingredients_only = [[{'bulgur', 'pomegranate molasses', 'chopped parsley', 'lemo
                      {'toasted bread', 'rosemary', 'hazelnuts', 'anchovy fillets', 'garlic', 'carrot', 'summer squash', 'black pepper', 'red pepper flakes', 'vinegar', 'sea salt', 'zucchini', 'olive oil', 'onions', 'white wine vinegar', 'fresh mint', 'leg of lamb', 'lemon', 'fresh ricotta', 'sugar', 'celery', 'bay leaves', 'kosher salt'}
                      ]]
 
-
-#####################################
-# Data for test_separate_appetizers #
-#####################################
-
-
 vegan = ['Kisir with Warm Pita', 'Shakshuka', 'Vegetarian Khoresh Bademjan', 'Baked Kelewele', 'Waakye', 'Georgian Eggplant Rolls with Walnuts', 'Burmese Tofu with Garlic, Ginger and Chili Sauce', 'Celeriac Schnitzel', 'Sticky Lemon Tofu', 'Vegan Carbonara', 'Vegan Pizza with Caramelized Onions', 'Cheela with Spicy Mango Chutney', 'Sweet and Spicy Crispy Green Beans', 'Vegan Mini Savory Mince Pies', 'Roasted Corn and Zucchini Salad', 'Golden Potato Salad', 'Carrot Puff Pastry Tart', 'Kisir with Warm Pita', 'Baked Kelewele', 'Burmese Tofu with Garlic, Ginger and Chili Sauce', 'Vegan Carbonara', 'Sweet and Spicy Crispy Green Beans', 'Golden Potato Salad']
 vegan_appetizers = ['Georgian Eggplant Rolls with Walnuts', 'Cheela with Spicy Mango Chutney', 'Vegan Mini Savory Mince Pies', 'Carrot Puff Pastry Tart', 'Georgian Eggplant Rolls with Walnuts', 'Carrot Puff Pastry Tart']
 vegan_dishes = ['Golden Potato Salad', 'Roasted Corn and Zucchini Salad', 'Sticky Lemon Tofu', 'Shakshuka', 'Burmese Tofu with Garlic, Ginger and Chili Sauce', 'Vegan Pizza with Caramelized Onions', 'Celeriac Schnitzel', 'Waakye', 'Vegan Carbonara', 'Sweet and Spicy Crispy Green Beans', 'Vegetarian Khoresh Bademjan', 'Baked Kelewele', 'Kisir with Warm Pita']
 vegan_appetizer_names = ['Georgian Eggplant Rolls with Walnuts','Cheela with Spicy Mango Chutney','Vegan Mini Savory Mince Pies','Carrot Puff Pastry Tart']
-
 
 vegetarian = ['Mushroom Lasagna', 'Nut Wellington', 'Roast Pumpkin and Lentil Salad with Roasted Lemon Dressing', 'Cambodian-Style Vegetable Spring Rolls', 'Summer Minestrone Cups', 'Fried Zucchini with Balsamic and Chili Dressing', 'Barley Risotto', 'Cherry Tomato, Watercress and Fava Bean Salad', 'Fresh Garden Peas over Cauliflower Almond Puree', 'Walnut Ravioli with Artichokes and Tomatoes', 'Asparagus Puffs', 'Grilled Tofu Tacos', 'Mushroom Lasagna', 'Cambodian-Style Vegetable Spring Rolls', 'Barley Risotto', 'Walnut Ravioli with Artichokes and Tomatoes']
 vegetarian_appetizers = ['Cambodian-Style Vegetable Spring Rolls', 'Summer Minestrone Cups', 'Asparagus Puffs', 'Grilled Tofu Tacos', 'Cambodian-Style Vegetable Spring Rolls', 'Grilled Tofu Tacos']
 vegetarian_dishes = ['Walnut Ravioli with Artichokes and Tomatoes', 'Mushroom Lasagna', 'Fried Zucchini with Balsamic and Chili Dressing', 'Barley Risotto', 'Nut Wellington', 'Cherry Tomato, Watercress and Fava Bean Salad', 'Roast Pumpkin and Lentil Salad with Roasted Lemon Dressing', 'Fresh Garden Peas over Cauliflower Almond Puree']
 vegetarian_appetizer_names = ['Cambodian-Style Vegetable Spring Rolls','Summer Minestrone Cups','Asparagus Puffs','Grilled Tofu Tacos']
 
-
 paleo = ['Zucchini Fritters with Lemon-Thyme Coconut Yogurt', 'Avocado Deviled Eggs', 'Grilled Flank Steak with Caesar Salad', 'Pumpkin Bread Crostini', 'BLT Bites', 'Roasted Chicken with Roasted Tomatoes, Avocado, and Sweet Potatoes', 'Chicken with Tamarind and Apricot Sauce', 'Grilled Fish Tacos with Cauliflower Tortillas', 'Grilled Pork Chops with Mango Pineapple Salsa', 'Grilled Shrimp and Pesto over Zucchini Noodles', 'Zucchini Fritters with Lemon-Thyme Coconut Yogurt', 'Pumpkin Bread Crostini', 'Chicken with Tamarind and Apricot Sauce', 'Grilled Shrimp and Pesto over Zucchini Noodles']
 paleo_appetizers = ['Zucchini Fritters with Lemon-Thyme Coconut Yogurt', 'Avocado Deviled Eggs', 'Pumpkin Bread Crostini', 'BLT Bites', 'Zucchini Fritters with Lemon-Thyme Coconut Yogurt', 'BLT Bites']
 paleo_dishes = ['Roasted Chicken with Roasted Tomatoes, Avocado, and Sweet Potatoes', 'Grilled Flank Steak with Caesar Salad', 'Grilled Fish Tacos with Cauliflower Tortillas', 'Grilled Pork Chops with Mango Pineapple Salsa', 'Grilled Shrimp and Pesto over Zucchini Noodles', 'Chicken with Tamarind and Apricot Sauce']
 paleo_appetizer_names = ['Zucchini Fritters with Lemon-Thyme Coconut Yogurt','Avocado Deviled Eggs','Pumpkin Bread Crostini','BLT Bites']
-
 
 keto = ['Cauliflower Pizza with Roasted Tomatoes and Chicken', 'Flank Steak with Chimichurri and Asparagus', 'Kingfish Lettuce Cups', 'Butter Chicken with Grilled Mushrooms, Brussel Sprouts and Mango Chutney', 'Prawn and Herb Omelette', 'Satay Steak Skewers', 'Parmesan Crackers and Spinach Crackers with Salmon Pate', 'Pork Chops with Grilled Castelfranco Radicchio and Asparagus', 'Seared Salmon with Pickled Vegetable and Watercress Salad', 'Braised Pork Belly with Apple Salad', 'Cauliflower Pizza with Roasted Tomatoes and Chicken', 'Butter Chicken with Grilled Mushrooms, Brussel Sprouts and Mango Chutney', 'Parmesan Crackers and Spinach Crackers with Salmon Pate', 'Braised Pork Belly with Apple Salad']
 keto_appetizers = ['Kingfish Lettuce Cups', 'Prawn and Herb Omelette', 'Satay Steak Skewers', 'Parmesan Crackers and Spinach Crackers with Salmon Pate', 'Kingfish Lettuce Cups', 'Parmesan Crackers and Spinach Crackers with Salmon Pate']
 keto_dishes = ['Cauliflower Pizza with Roasted Tomatoes and Chicken', 'Butter Chicken with Grilled Mushrooms, Brussel Sprouts and Mango Chutney', 'Braised Pork Belly with Apple Salad', 'Seared Salmon with Pickled Vegetable and Watercress Salad', 'Pork Chops with Grilled Castelfranco Radicchio and Asparagus', 'Flank Steak with Chimichurri and Asparagus']
 keto_appetizer_names = ['Kingfish Lettuce Cups','Prawn and Herb Omelette','Satay Steak Skewers','Parmesan Crackers and Spinach Crackers with Salmon Pate']
 
-
 omnivore = ['Beachside Snapper', 'Governor Shrimp Tacos', 'Shrimp, Bacon and Crispy Chickpea Tacos with Salsa de Guacamole', 'Burnt Masala Wings with Classic Coleslaw', 'Dahi Puri with Black Chickpeas', 'Brisket with Grilled Rhubarb, Onions, and Fennel', 'Roast Leg of Lamb with Crispy Moroccan Carrots & Couscous', 'Baked Chicken Jollof Rice', 'Seafood Risotto', 'Lamb over Marinated Summer Squash with Hazelnuts and Ricotta', 'Beachside Snapper', 'Burnt Masala Wings with Classic Coleslaw', 'Roast Leg of Lamb with Crispy Moroccan Carrots & Couscous', 'Lamb over Marinated Summer Squash with Hazelnuts and Ricotta']
 omnivore_appetizers = ['Governor Shrimp Tacos', 'Burnt Masala Wings with Classic Coleslaw', 'Dahi Puri with Black Chickpeas', 'Seafood Risotto', 'Governor Shrimp Tacos', 'Seafood Risotto']
 omnivore_dishes = ['Lamb over Marinated Summer Squash with Hazelnuts and Ricotta', 'Shrimp, Bacon and Crispy Chickpea Tacos with Salsa de Guacamole', 'Brisket with Grilled Rhubarb, Onions, and Fennel', 'Roast Leg of Lamb with Crispy Moroccan Carrots & Couscous', 'Beachside Snapper', 'Baked Chicken Jollof Rice']
 omnivore_appetizer_names = ['Governor Shrimp Tacos','Burnt Masala Wings with Classic Coleslaw','Dahi Puri with Black Chickpeas','Seafood Risotto']
-
 
 dishes_and_appetizers = ((vegan, vegan_appetizers),
                          (vegetarian, vegetarian_appetizers),
@@ -438,12 +398,6 @@ dishes_cleaned = (vegan_dishes,
                   keto_dishes,
                   omnivore_dishes
                   )
-
-
-#######################################
-# Data for test_singleton_ingredients #
-#######################################
-
 
 intersections = (VEGAN_INTERSECTIONS, VEGETARIAN_INTERSECTIONS, PALEO_INTERSECTIONS,
                  KETO_INTERSECTIONS, OMNIVORE_INTERSECTIONS)

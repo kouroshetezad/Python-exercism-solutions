@@ -7,10 +7,8 @@ This is a module docstring, used to describe the functionality
 of a module and its functions and/or classes.
 """
 
-
 EXPECTED_BAKE_TIME = 40
 PREPARATION_TIME = 7
-
 
 def bake_time_remaining(elapsed_baked_time):
     """Calculate the bake time remaining.
@@ -23,13 +21,7 @@ def bake_time_remaining(elapsed_baked_time):
     based on the `EXPECTED_BAKE_TIME`.
     """
     return EXPECTED_BAKE_TIME - elapsed_baked_time
-    
 
-
-
-# To avoid the use of magic numbers (see: https://en.wikipedia.org/wiki/Magic_number_(programming)), you should define a PREPARATION_TIME constant.
-# You can do that on the line below the 'EXPECTED_BAKE_TIME' constant.
-# This will make it easier to do calculations, and make changes to your code.
 def preparation_time_in_minutes(number_of_layers):
     """Calculate the elapsed cooking time.
 
@@ -41,8 +33,7 @@ def preparation_time_in_minutes(number_of_layers):
     time already spent baking and calculates the total elapsed minutes spent cooking the
     lasagna.
     """
-    return number_of_layers * 2  
-
+    return number_of_layers * 2
 
 def elapsed_time_in_minutes(number_of_layer , elapsed_bake_time):
     """Calculate the elapsed cooking time.
@@ -56,6 +47,3 @@ def elapsed_time_in_minutes(number_of_layer , elapsed_bake_time):
     lasagna.
     """
     return (number_of_layer * 2) + elapsed_bake_time
-
-
-#  (you can copy and then alter the one from bake_time_remaining.)

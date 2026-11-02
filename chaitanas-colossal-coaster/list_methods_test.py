@@ -2,7 +2,6 @@ import unittest
 from copy import deepcopy
 import pytest
 
-
 from list_methods import (
     add_me_to_the_queue,
     find_my_friend,
@@ -12,7 +11,6 @@ from list_methods import (
     remove_the_last_person,
     sorted_names,
 )
-
 
 class ListMethodsTest(unittest.TestCase):
     @pytest.mark.task(taskno=1)
@@ -25,8 +23,6 @@ class ListMethodsTest(unittest.TestCase):
         ]
 
         for variant, (params, expected) in enumerate(test_data, start=1):
-            # Deepcopy() is needed here because the task expects the input lists to be mutated.
-            # That mutation wrecks havoc with the verification and error messaging.
             express_queue, normal_queue, ticket_type, person_name = deepcopy(params)
 
             with self.subTest(f'variation #{variant}', params=params, expected=expected):
@@ -49,8 +45,6 @@ class ListMethodsTest(unittest.TestCase):
         ]
 
         for variant, (params, expected) in enumerate(test_data, start=1):
-            # Deepcopy() is needed here because the task expects the input lists to be mutated.
-            # That mutation wrecks havoc with the verification and error messaging.
             express_queue, normal_queue, ticket_type, person_name = deepcopy(params)
             express, normal, ticket, name = params
 
@@ -115,8 +109,6 @@ class ListMethodsTest(unittest.TestCase):
         ]
 
         for variant, (params, expected) in enumerate(zip(test_data, result_data), start=1):
-            # Deepcopy() is needed here because the task expects the input lists to be mutated.
-            # That mutation wrecks havoc with the verification and error messaging.
             queue, index, person_name = deepcopy(params)
 
             with self.subTest(f'variation #{variant}', params=params, expected=expected):
@@ -146,8 +138,6 @@ class ListMethodsTest(unittest.TestCase):
         ]
 
         for variant, (params, expected) in enumerate(zip(test_data, result_data), start=1):
-            # Deepcopy() is needed here because the task expects the input lists to be mutated.
-            # That mutation wrecks havoc with the verification and error messaging.
             start_queue, add_index, person_name = deepcopy(params)
             queue, _, _ = params
 
@@ -178,8 +168,6 @@ class ListMethodsTest(unittest.TestCase):
 
         for variant, (params, expected) in enumerate(zip(test_data, result_data), start=1):
 
-            # Deepcopy() is needed here because the task expects the input lists to be mutated.
-            # That mutation wrecks havoc with the verification and error messaging.
             start_queue, person_name = deepcopy(params)
 
             with self.subTest(f'variation #{variant}', params=params, expected=expected):
@@ -207,11 +195,8 @@ class ListMethodsTest(unittest.TestCase):
                 ['Ultron', 'Natasha', 'Wanda', 'Rocket'],
         ]
 
-
         for variant, (params, expected) in enumerate(zip(test_data, result_data), start=1):
 
-            # Deepcopy() is needed here because the task expects the input lists to be mutated.
-            # That mutation wrecks havoc with the verification and error messaging.
             start_queue, person_name = deepcopy(params)
             queue, _ = params
 
@@ -225,7 +210,6 @@ class ListMethodsTest(unittest.TestCase):
                 )
 
                 self.assertIs(actual_result, queue, msg=error_message)
-
 
     @pytest.mark.task(taskno=5)
     def test_how_many_namefellows(self):
@@ -256,8 +240,6 @@ class ListMethodsTest(unittest.TestCase):
         for variant, (queue, modified, expected) in enumerate(test_data, start=1):
             with self.subTest(f'variation #{variant}', queue=queue, modified=modified, expected=expected):
 
-                # Deepcopy() is needed here because the task expects the input lists to be mutated.
-                # That mutation wrecks havoc with the verification and error messaging.
                 unmodified_queue = deepcopy(queue)
                 expected_result = expected
                 actual_result = remove_the_last_person(queue)
@@ -269,7 +251,6 @@ class ListMethodsTest(unittest.TestCase):
                                  f'but the name "{actual_result}" was returned and the queue == {queue}.')
 
                 self.assertEqual((actual_result, queue), (expected_result, expected_queue), msg=error_message)
-
 
     @pytest.mark.task(taskno=7)
     def test_sorted_names(self):
@@ -301,8 +282,6 @@ class ListMethodsTest(unittest.TestCase):
         for variant, (queue, expected) in enumerate(test_data, start=1):
             with self.subTest(f'variation #{variant}', queue=queue, expected=expected):
 
-                # Deepcopy() is needed here because the input lists might be mutated.
-                # That mutation wrecks havoc with the verification and error messaging.
                 original_queue = deepcopy(queue)
                 actual_result = sorted_names(queue)
                 expected_result = expected

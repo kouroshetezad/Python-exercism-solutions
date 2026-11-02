@@ -1,14 +1,9 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/resistor-color/canonical-data.json
-# File last updated on 2023-07-19
-
 import unittest
 
 from resistor_color import (
     color_code,
     colors,
 )
-
 
 class ResistorColorTest(unittest.TestCase):
     def test_black(self):

@@ -1,14 +1,9 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/grains/canonical-data.json
-# File last updated on 2026-02-19
-
 import unittest
 
 from grains import (
     square,
     total,
 )
-
 
 class GrainsTest(unittest.TestCase):
 

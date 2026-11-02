@@ -1,13 +1,8 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/reverse-string/canonical-data.json
-# File last updated on 2024-02-28
-
 import unittest
 
 from reverse_string import (
     reverse,
 )
-
 
 class ReverseStringTest(unittest.TestCase):
     def test_an_empty_string(self):

@@ -1,7 +1,3 @@
-# These tests are auto-generated with test data from:
-# https://github.com/exercism/problem-specifications/tree/main/exercises/triangle/canonical-data.json
-# File last updated on 2026-02-19
-
 import unittest
 
 from triangle import (
@@ -9,7 +5,6 @@ from triangle import (
     isosceles,
     scalene,
 )
-
 
 class EquilateralTriangleTest(unittest.TestCase):
 
@@ -27,7 +22,6 @@ class EquilateralTriangleTest(unittest.TestCase):
 
     def test_sides_may_be_floats(self):
         self.assertIs(equilateral([0.5, 0.5, 0.5]), True)
-
 
 class IsoscelesTriangleTest(unittest.TestCase):
 
@@ -57,7 +51,6 @@ class IsoscelesTriangleTest(unittest.TestCase):
 
     def test_sides_may_be_floats(self):
         self.assertIs(isosceles([0.5, 0.4, 0.5]), True)
-
 
 class ScaleneTriangleTest(unittest.TestCase):
 

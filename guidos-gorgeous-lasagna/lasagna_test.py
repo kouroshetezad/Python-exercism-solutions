@@ -1,32 +1,24 @@
 import unittest
 import pytest
 
-# For this first exercise, it is really important to be clear about how we are importing names for tests.
-# To that end, we are putting a try/catch around imports and throwing specific messages to help students
-# decode that they need to create and title their constants and functions in a specific way.
 try:
     from lasagna import (EXPECTED_BAKE_TIME,
                          bake_time_remaining,
                          preparation_time_in_minutes,
                          elapsed_time_in_minutes)
 
-# Here, we are separating the constant import errors from the function name import errors
 except ImportError as import_fail:
     message = import_fail.args[0].split('(', maxsplit=1)
     item_name = import_fail.args[0].split()[3]
 
     if 'EXPECTED_BAKE_TIME' in item_name:
-        # pylint: disable=raise-missing-from
         raise ImportError(f'\n\nMISSING CONSTANT --> \nWe can not find or import the constant {item_name} in your'
                           " 'lasagna.py' file.\nDid you misname or forget to define it?") from None
     else:
         item_name = item_name[:-1] + "()'"
-        # pylint: disable=raise-missing-from
         raise ImportError("\n\nMISSING FUNCTION --> In your 'lasagna.py' file, we can not find or import the"
                           f' function named {item_name}. \nDid you misname or forget to define it?') from None
 
-
-# Here begins the formal test cases for the exercise.
 class LasagnaTest(unittest.TestCase):
 
     @pytest.mark.task(taskno=1)
@@ -42,7 +34,7 @@ class LasagnaTest(unittest.TestCase):
         for variant, (time, expected) in enumerate(zip(input_data, result_data), start=1):
             with self.subTest(f'variation #{variant}', time=time, expected=expected):
                 actual_result = bake_time_remaining(time)
-                failure_msg = (f'Called bake_time_remaining({time}). ' 
+                failure_msg = (f'Called bake_time_remaining({time}). '
                                f'The function returned {actual_result}, but the tests '
                                f'expected {expected} as the remaining bake time.')
 
@@ -93,5 +85,4 @@ class LasagnaTest(unittest.TestCase):
                 failure_msg = (f'Called {function.__name__}.__doc__. {actual_result} was returned, '
                                f'but the tests expected a docstring for the {function.__name__} function.')
 
-                # Check that the __doc__ key is populated for the function.
                 self.assertIsNotNone(actual_result, msg=failure_msg)
